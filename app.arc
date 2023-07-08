@@ -25,7 +25,13 @@ users
   password String
   firstName String
   lastName String
-    
+
+stores
+  storeID *String
+  userID **String
+  name String
+  slug String
+  
 @aws
 region us-west-2
 architecture arm64

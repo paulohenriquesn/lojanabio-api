@@ -1,41 +1,57 @@
-import { AlreadyExistsError } from '../../main/errors/alredy-exists.mjs'
-import { nanoid } from 'nanoid'
+import { AlreadyExistsError } from "../../main/errors/already-exists.mjs";
 
-export class addUser  {
+export class addUser {
+  bcryptAdapter;
+  addUserRepository;
+  getUserByEmailRepository;
+  getStoreBySlugRepository;
+  addStoreRepository;
 
-    bcryptAdapter
-    addUserRepository
-    getUserByEmailRepository
+  constructor(
+    bcryptAdapter,
+    addUserRepository,
+    getUserByEmailRepository,
+    getStoreBySlugRepository,
+    addStoreRepository
+  ) {
+    this.bcryptAdapter = bcryptAdapter;
+    this.addUserRepository = addUserRepository;
+    this.getUserByEmailRepository = getUserByEmailRepository;
+    this.getStoreBySlugRepository = getStoreBySlugRepository;
+    this.addStoreRepository = addStoreRepository;
+  }
 
-    constructor(
-         bcryptAdapter,
-         addUserRepository, 
-         getUserByEmailRepository
-    ) {
-        this.bcryptAdapter = bcryptAdapter
-        this.addUserRepository = addUserRepository
-        this.getUserByEmailRepository = getUserByEmailRepository
+  async handle(input) {
+    const { email, password, firstName, lastName, storeName, storeSlug } =
+      input;
+
+    const userExists = await this.getUserByEmailRepository.handle({ email });
+
+    if (!!userExists) {
+      throw new AlreadyExistsError("User");
     }
 
-    async handle(input) {
-        const {email, password, firstName, lastName} = input;
+    const storeExists = await this.getStoreBySlugRepository.handle({
+      storeSlug,
+    });
 
-        const userExists = await this.getUserByEmailRepository.handle({email})
-
-        if(!!userExists) {
-            throw new AlreadyExistsError('User')
-        }
-
-        const userId = nanoid()
-        const hashedPassword = await this.bcryptAdapter.encrypt(password)
-
-        
-        await this.addUserRepository.handle({
-            userId,
-            email,
-            password: hashedPassword,
-            firstName,
-            lastName
-        })
+    if (!!storeExists) {
+      throw new AlreadyExistsError("Store");
     }
+
+    const hashedPassword = await this.bcryptAdapter.encrypt(password);
+
+    const { userId } = await this.addUserRepository.handle({
+      email,
+      password: hashedPassword,
+      firstName,
+      lastName,
+    });
+
+    await this.addStoreRepository.handle({
+      storeName,
+      storeSlug,
+      userID: userId,
+    });
+  }
 }
