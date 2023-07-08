@@ -17,7 +17,7 @@ export async function handler(req) {
 
   const usecase = await makeAddUser();
   try {
-    usecase.handle({
+    await usecase.handle({
       email,
       password,
       firstName,
