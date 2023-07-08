@@ -12,6 +12,7 @@
     "@architect/functions": "^6.0.1",
     "@aws-sdk/node-http-handler": "^3.360.0",
     "aws-sdk": "^2.1413.0",
+    "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.1",
     "nanoid": "^4.0.2"
   }

@@ -37,3 +37,14 @@ export const serverError = (error) => {
         body: JSON.stringify({error: error.message})
     }
 }
+
+
+export const unAuthorized = (error) => {
+    return {
+        statusCode: 401,
+        headers: {
+        'content-type': 'application/json; charset=utf8'
+        },
+        body: JSON.stringify({error: error.message})
+    }
+}

@@ -8,7 +8,11 @@ lojanabio
 
 /user
   method post
-  src src/main/http/post-user  
+  src src/main/http/post-user 
+  
+/login
+  method post
+  src src/main/http/post-user-login 
 
 @tables
 users

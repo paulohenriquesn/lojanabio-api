@@ -1,20 +1,17 @@
-import { Encrypter } from "../abstracts/encrypter.mjs";
-import { AddUserRepository } from '../../data/repositories/add-user.mjs'
-import { GetUserByEmailRepository } from '../../data/repositories/get-user-by-email.mjs'
 import { nanoid } from 'nanoid'
 
 export class addUser  {
 
-    encrypterAdapter
+    bcryptAdapter
     addUserRepository
     getUserByEmailRepository
 
     constructor(
-         encrypterAdapter,
+         bcryptAdapter,
          addUserRepository, 
          getUserByEmailRepository
     ) {
-        this.encrypterAdapter = encrypterAdapter
+        this.bcryptAdapter = bcryptAdapter
         this.addUserRepository = addUserRepository
         this.getUserByEmailRepository = getUserByEmailRepository
     }
@@ -29,7 +26,7 @@ export class addUser  {
         }
 
         const userId = nanoid()
-        const hashedPassword = await this.encrypterAdapter.encrypt(userId)
+        const hashedPassword = await this.bcryptAdapter.encrypt(password)
 
         
         await this.addUserRepository.handle({
