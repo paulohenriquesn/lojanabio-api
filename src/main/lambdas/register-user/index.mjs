@@ -5,7 +5,7 @@ import { makeAddUser } from "../../factories/add-user.mjs";
 export async function handler(req) {
   const body = JSON.parse(req.body);
 
-  const requiredFields = ["email", "password", "firstName", "lastName", "storeName", "storeSlug"];
+  const requiredFields = ["email", "password", "firstName", "lastName"];
 
   for (const field of requiredFields) {
     if (!body[field]) {
@@ -13,7 +13,7 @@ export async function handler(req) {
     }
   }
 
-  const { email, password, firstName, lastName, storeName, storeSlug } = body;
+  const { email, password, firstName, lastName } = body;
 
   const usecase = await makeAddUser();
   try {
@@ -22,8 +22,6 @@ export async function handler(req) {
       password,
       firstName,
       lastName,
-      storeName,
-      storeSlug
     });
 
     return create({
