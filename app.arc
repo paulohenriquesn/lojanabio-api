@@ -10,6 +10,10 @@ lojanabio
   method post
   src src/main/lambdas/register-user
   
+/user
+  method get
+  src src/main/lambdas/get-user
+
 /login
   method post
   src src/main/lambdas/auth-user

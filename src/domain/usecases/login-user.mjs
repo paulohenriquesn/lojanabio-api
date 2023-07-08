@@ -29,6 +29,7 @@ export class authUser  {
             throw new Error('Invalid password')
         }
         
-        return await this.jwtAdapter.encrypt(user.id)
+
+        return await this.jwtAdapter.encrypt(user.userID)
     }
 }
