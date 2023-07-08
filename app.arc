@@ -14,6 +14,10 @@ lojanabio
   method get
   src src/main/lambdas/get-user
 
+/stores
+  method get
+  src src/main/lambdas/get-stores
+
 /login
   method post
   src src/main/lambdas/auth-user

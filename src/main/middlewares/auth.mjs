@@ -15,9 +15,9 @@ export const authMiddleware = async (req) => {
 
     const findUserByIdRepository = new GetUserByIdRepository()
 
-    const { id, email, firstName, lastName } = await findUserByIdRepository.handle({
+    const { userID, email, firstName, lastName } = await findUserByIdRepository.handle({
         id: user.id
     })
 
-   return { id, email, firstName, lastName }
+   return { userID, email, firstName, lastName }
 }

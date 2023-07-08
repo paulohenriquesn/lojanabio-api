@@ -10,7 +10,7 @@ export class AddUserRepository extends Repository {
     const userId = nanoid();
 
     await users.put({
-      userID: nanoid(),
+      userID: userId,
       email,
       password,
       firstName,
