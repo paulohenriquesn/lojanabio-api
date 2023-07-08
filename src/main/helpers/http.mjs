@@ -20,7 +20,7 @@ export const create = (body) => {
 
 export const badRequest = (body) => {
     return {
-        statusCode: 404,
+        statusCode: 400,
         headers: {
         'content-type': 'application/json; charset=utf8'
         },

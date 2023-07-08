@@ -4,15 +4,15 @@ lojanabio
 @http
 /
   method get
-  src src/main/http/get-index
+  src src/main/lambdas/health
 
 /user
   method post
-  src src/main/http/post-user 
+  src src/main/lambdas/register-user
   
 /login
   method post
-  src src/main/http/post-user-login 
+  src src/main/lambdas/auth-user
 
 @tables
 users
