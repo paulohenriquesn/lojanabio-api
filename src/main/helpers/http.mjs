@@ -18,6 +18,17 @@ export const create = (body) => {
     }
 }
 
+export const deleted = (body) => {
+    return {
+        statusCode: 202,
+        headers: {
+        'content-type': 'application/json; charset=utf8'
+        },
+        body: JSON.stringify(body)
+    }
+}
+
+
 export const badRequest = (body) => {
     return {
         statusCode: 400,
