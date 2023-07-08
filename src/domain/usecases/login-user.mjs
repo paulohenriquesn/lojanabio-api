@@ -1,3 +1,6 @@
+import {InvalidAuthError} from '../../main/errors/invalid-auth.mjs'
+import {NotFoundError} from '../../main/errors/not-found.mjs'
+
 export class authUser  {
 
     bcryptAdapter
@@ -20,13 +23,13 @@ export class authUser  {
         const user = await this.getUserByEmailRepository.handle({email})
         
         if(!user) {
-            throw new Error('User does not exists')
+            throw new NotFoundError('User')
         }
 
         const validatePassword = await this.bcryptAdapter.decrypt(password, user.password)
 
         if(!validatePassword) {
-            throw new Error('Invalid password')
+            throw new InvalidAuthError()
         }
         
 

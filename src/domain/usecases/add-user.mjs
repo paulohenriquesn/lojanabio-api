@@ -1,3 +1,4 @@
+import { AlreadyExistsError } from '../../main/errors/alredy-exists.mjs'
 import { nanoid } from 'nanoid'
 
 export class addUser  {
@@ -22,7 +23,7 @@ export class addUser  {
         const userExists = await this.getUserByEmailRepository.handle({email})
 
         if(!!userExists) {
-            throw new Error('User already exists')
+            throw new AlreadyExistsError('User')
         }
 
         const userId = nanoid()
