@@ -26,7 +26,7 @@ export async function handler(req) {
       userID,
     });
 
-    return created();
+    return create();
   } catch (error) {
     return unAuthorized(error);
   }
