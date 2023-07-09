@@ -34,6 +34,10 @@ lojanabio
   method post
   src src/main/lambdas/auth-user
 
+/products
+  method post
+  src src/main/lambdas/add-product
+
 @tables
 users
   userID *String
@@ -47,6 +51,14 @@ stores
   userID **String
   name String
   slug String
+
+products
+  productID *String
+  storeID **String
+  name String
+  description String
+  affiliateURL String
+  imageURL String
   
 @aws
 region us-west-2

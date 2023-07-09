@@ -1,5 +1,5 @@
 import { MissingParamError } from "../../errors/missing-param.mjs";
-import { makeAddStore } from "../../factories/add-store.mjs";
+import { makeAddProduct } from "../../factories/add-product.mjs";
 import { badRequest, create, unAuthorized } from "../../helpers/http.mjs";
 import { authMiddleware } from "../../middlewares/auth.mjs";
 
@@ -9,7 +9,13 @@ export async function handler(req) {
 
     const body = JSON.parse(req.body);
 
-    const requiredFields = ["name", "slug"];
+    const requiredFields = [
+      "name",
+      "description",
+      "affiliateURL",
+      "imageURL",
+      "storeID",
+    ];
 
     for (const field of requiredFields) {
       if (!body[field]) {
@@ -17,15 +23,8 @@ export async function handler(req) {
       }
     }
 
-    const { name, slug } = body;
-
-    const usecase = await makeAddStore();
-
-    await usecase.handle({
-      name,
-      slug,
-      userID,
-    });
+    const usecase = await makeAddProduct();
+    await usecase.handle({ ...body, userID });
 
     return create();
   } catch (error) {
