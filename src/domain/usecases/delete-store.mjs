@@ -1,7 +1,7 @@
 export class deleteStore {
   deleteStoreRepository;
 
-  constructor(deleteStoreRepository, addStoreRepository) {
+  constructor(deleteStoreRepository) {
     this.deleteStoreRepository = deleteStoreRepository;
   }
 

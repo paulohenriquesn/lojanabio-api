@@ -23,6 +23,10 @@ lojanabio
   src src/main/lambdas/add-store
 
 /stores
+  method patch
+  src src/main/lambdas/update-store
+
+/stores
   method delete
   src src/main/lambdas/delete-store
 
