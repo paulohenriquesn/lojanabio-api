@@ -38,6 +38,10 @@ lojanabio
   method post
   src src/main/lambdas/add-product
 
+/products/:storeid
+  method get
+  src src/main/lambdas/get-products
+
 @tables
 users
   userID *String
