@@ -38,6 +38,11 @@ lojanabio
   method post
   src src/main/lambdas/add-product
 
+
+/products/:productid
+  method put
+  src src/main/lambdas/update-product
+
 /products/:storeid
   method get
   src src/main/lambdas/get-products

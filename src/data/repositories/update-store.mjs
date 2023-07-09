@@ -7,8 +7,8 @@ export class UpdateStoreRepository extends Repository {
     const { stores } = await arc.tables();
     await stores.update({
       Key: {
-        storeID: storeID,
-        userID: userID,
+        storeID,
+        userID
       },
       UpdateExpression: "set #nm = :name",
       ExpressionAttributeNames: {
