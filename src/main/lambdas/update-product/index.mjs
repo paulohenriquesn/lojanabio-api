@@ -3,10 +3,9 @@ import { makeUpdateProduct } from "../../factories/update-product.mjs";
 import { authMiddleware } from "../../middlewares/auth.mjs";
 import { MissingParamError } from "../../errors/missing-param.mjs";
 
-
 export async function handler(req) {
   try {
-    const { userID } = await authMiddleware(req);
+    await authMiddleware(req);
 
     const body = JSON.parse(req.body);
 
@@ -18,10 +17,10 @@ export async function handler(req) {
       }
     }
 
-   const usecase = await makeUpdateProduct();
+    const usecase = await makeUpdateProduct();
     await usecase.handle({
       productID: req.pathParameters.productid,
-      ...body
+      ...body,
     });
 
     return ok();
