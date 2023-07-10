@@ -18,9 +18,15 @@ lojanabio
   method get
   src src/main/lambdas/get-stores
 
+/stores/:slug
+  method get
+  src src/main/lambdas/get-store
+
+
 /stores
   method post
   src src/main/lambdas/add-store
+
 
 /stores
   method patch
