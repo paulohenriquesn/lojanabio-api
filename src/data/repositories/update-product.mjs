@@ -3,7 +3,7 @@ import { Repository } from "../../domain/abstracts/repository.mjs";
 
 export class UpdateProductRepository extends Repository {
   async handle(product) {
-    const { productID } = product;
+    const { productID, storeID } = product;
     
     const keysToUpdate = Object.keys(product).filter((key) => key != "storeID" && key != "productID");
 
@@ -25,7 +25,7 @@ export class UpdateProductRepository extends Repository {
     await products.update({
       Key: {
         productID,
-        storeID: "hd0g2nscg2VnBK1GquMDM"
+        storeID
       },
       UpdateExpression,
       ExpressionAttributeNames,
