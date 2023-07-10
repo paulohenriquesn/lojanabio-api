@@ -1,7 +1,7 @@
-import { badRequest, deleted, unAuthorized } from "../../helpers/http.mjs";
-import { MissingParamError } from "../../errors/missing-param.mjs";
-import { makeDeleteStore } from "../../factories/delete-store.mjs";
-import { authMiddleware } from "../../middlewares/auth.mjs";
+import { badRequest, deleted, unAuthorized } from "../../core/main/helpers/http.mjs";
+import { MissingParamError } from "../../core/main/errors/missing-param.mjs";
+import { makeDeleteStore } from "../../core/main/factories/delete-store.mjs";
+import { authMiddleware } from "../../core/main/middlewares/auth.mjs";
 
 export async function handler(req) {
   try {

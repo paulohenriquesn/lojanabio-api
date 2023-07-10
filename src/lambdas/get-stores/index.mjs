@@ -1,6 +1,6 @@
-import { ok, unAuthorized } from "../../helpers/http.mjs";
-import { authMiddleware } from "../../middlewares/auth.mjs";
-import { makeGetStores } from "../../factories/get-stores.mjs"
+import { ok, unAuthorized } from "../../core/main/helpers/http.mjs";
+import { authMiddleware } from "../../core/main/middlewares/auth.mjs";
+import { makeGetStores } from "../../core/main/factories/get-stores.mjs"
 
 export async function handler(req) {
   try {

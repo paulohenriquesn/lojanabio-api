@@ -1,5 +1,5 @@
-import { ok, unAuthorized } from "../../helpers/http.mjs";
-import { authMiddleware } from "../../middlewares/auth.mjs";
+import { ok, unAuthorized } from "../../core/main/helpers/http.mjs";
+import { authMiddleware } from "../../core/main/middlewares/auth.mjs";
 
 export async function handler(req) {
   try {

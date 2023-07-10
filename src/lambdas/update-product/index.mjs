@@ -1,7 +1,7 @@
-import { ok, unAuthorized, badRequest } from "../../helpers/http.mjs";
-import { makeUpdateProduct } from "../../factories/update-product.mjs";
-import { authMiddleware } from "../../middlewares/auth.mjs";
-import { MissingParamError } from "../../errors/missing-param.mjs";
+import { ok, unAuthorized, badRequest } from "../../core/main/helpers/http.mjs";
+import { makeUpdateProduct } from "../../core/main/factories/update-product.mjs";
+import { authMiddleware } from "../../core/main/middlewares/auth.mjs";
+import { MissingParamError } from "../../core/main/errors/missing-param.mjs";
 
 export async function handler(req) {
   try {

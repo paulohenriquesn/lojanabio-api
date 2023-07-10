@@ -1,4 +1,4 @@
-import { ok } from "../../helpers/http.mjs";
+import { ok } from "../../core/main/helpers/http.mjs";
 
 export async function handler (req) {
   return ok({

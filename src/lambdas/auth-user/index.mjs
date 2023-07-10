@@ -2,9 +2,9 @@ import {
   badRequest,
   ok,
   unAuthorized,
-} from "../../helpers/http.mjs";
-import { MissingParamError } from "../../errors/missing-param.mjs";
-import { makeLoginUser } from "../../factories/login-user.mjs"
+} from "../../core/main/helpers/http.mjs";
+import { MissingParamError } from "../../core/main/errors/missing-param.mjs";
+import { makeLoginUser } from "../../core/main/factories/login-user.mjs"
 
 export async function handler(req) {
   const body = JSON.parse(req.body);

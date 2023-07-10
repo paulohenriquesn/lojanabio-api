@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Exported by architect/package@8.5.0 on 2023-07-10T01:01:45.890Z
+Description: Exported by architect/package@8.5.0 on 2023-07-10T01:04:20.716Z
 Resources:
   Role:
     Type: AWS::IAM::Role
@@ -667,7 +667,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/13d8a91cdd6236a60447cc49aa5b7a70
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/ea1659c30f5eefe76aaaddcaa13f66fc
       Runtime: nodejs16.x
       Architectures:
       - arm64

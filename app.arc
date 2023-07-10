@@ -4,58 +4,58 @@ lojanabio
 @http
 /
   method get
-  src src/main/lambdas/health
+  src src/lambdas/health
 
 /user
   method post
-  src src/main/lambdas/register-user
+  src src/lambdas/register-user
   
 /user
   method get
-  src src/main/lambdas/get-user
+  src src/lambdas/get-user
 
 /stores
   method get
-  src src/main/lambdas/get-stores
+  src src/lambdas/get-stores
 
 /stores/:slug
   method get
-  src src/main/lambdas/get-store
+  src src/lambdas/get-store
 
 
 /stores
   method post
-  src src/main/lambdas/add-store
+  src src/lambdas/add-store
 
 
 /stores
   method patch
-  src src/main/lambdas/update-store
+  src src/lambdas/update-store
 
 /stores
   method delete
-  src src/main/lambdas/delete-store
+  src src/lambdas/delete-store
 
 /login
   method post
-  src src/main/lambdas/auth-user
+  src src/lambdas/auth-user
 
 /products
   method post
-  src src/main/lambdas/add-product
+  src src/lambdas/add-product
 
 /products
   method delete
-  src src/main/lambdas/delete-product
+  src src/lambdas/delete-product
 
 
 /products/:productid
   method put
-  src src/main/lambdas/update-product
+  src src/lambdas/update-product
 
 /products/:storeid
   method get
-  src src/main/lambdas/get-products
+  src src/lambdas/get-products
 
 @tables
 users
@@ -79,6 +79,10 @@ products
   affiliateURL String
   imageURL String
   
+
+@shared
+src src/core
+
 @aws
 region us-west-2
 architecture arm64
