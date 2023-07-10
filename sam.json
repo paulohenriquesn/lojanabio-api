@@ -1,7 +1,7 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Transform": "AWS::Serverless-2016-10-31",
-  "Description": "Exported by architect/package@8.5.0 on 2023-07-10T01:04:20.716Z",
+  "Description": "Exported by architect/package@8.5.0 on 2023-07-10T01:17:08.820Z",
   "Resources": {
     "Role": {
       "Type": "AWS::IAM::Role",
@@ -496,7 +496,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/get-products",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/get-products",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -556,7 +556,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/get-store",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/get-store",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -616,7 +616,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/get-stores",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/get-stores",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -676,7 +676,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/get-user",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/get-user",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -736,7 +736,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/health",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/health",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -797,7 +797,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/auth-user",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/auth-user",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -857,7 +857,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/add-product",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/add-product",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -917,7 +917,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/add-store",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/add-store",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -977,7 +977,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/register-user",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/register-user",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -1037,7 +1037,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/update-product",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/update-product",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -1097,7 +1097,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/update-store",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/update-store",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -1157,7 +1157,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/delete-product",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/delete-product",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"
@@ -1217,7 +1217,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "index.handler",
-        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/main/lambdas/delete-store",
+        "CodeUri": "/Users/paulohenriquesn/Desktop/lojanabio-api/src/lambdas/delete-store",
         "Runtime": "nodejs16.x",
         "Architectures": [
           "arm64"

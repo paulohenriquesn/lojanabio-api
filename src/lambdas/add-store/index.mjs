@@ -1,7 +1,7 @@
-import { MissingParamError } from "../../core/main/errors/missing-param.mjs";
-import { makeAddStore } from "../../core/main/factories/add-store.mjs";
-import { badRequest, create, unAuthorized } from "../../core/main/helpers/http.mjs";
-import { authMiddleware } from "../../core/main/middlewares/auth.mjs";
+import { MissingParamError } from "@architect/shared/main/errors/missing-param.mjs";
+import { makeAddStore } from "@architect/shared/main/factories/add-store.mjs";
+import { badRequest, create, unAuthorized } from "@architect/shared/main/helpers/http.mjs";
+import { authMiddleware } from "@architect/shared/main/middlewares/auth.mjs";
 
 export async function handler(req) {
   try {

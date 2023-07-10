@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Exported by architect/package@8.5.0 on 2023-07-10T01:04:20.716Z
+Description: Exported by architect/package@8.5.0 on 2023-07-10T01:17:08.820Z
 Resources:
   Role:
     Type: AWS::IAM::Role
@@ -297,7 +297,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/7d9ee7ad28372391e376951ba5bf3071
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/6e90ecc144c66e09ce763bf5365bb9f7
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -338,7 +338,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/aa2a1c405a38b8e30bd8c9a262732b68
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/efbdba6001c946117264db1fdd457de6
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -379,7 +379,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/5e79263038483cf31cceb2f26ac78c29
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/9cba0143a5c866cdda327eb35ce95877
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -420,7 +420,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/625a27e358fdbe66a19ac3971b245e35
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/f554b0053c3cbb4e9d6600d1b7525024
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -461,7 +461,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/6b9b8dc4dd9903bc306e323e964c9ec7
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/17f181569e8c120907dccb33673dc52b
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -503,7 +503,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/97b2a5f69f14a25c614b84c566984534
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/fa3ec2f62891d5a7ef894c20edcc6241
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -544,7 +544,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/f849ce770fa7c437eb49c32a9cdca039
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/60c78ed0567e4c790c585e119625fda8
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -585,7 +585,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/39747de49400d6ba8637584755410063
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/410abb22c098eda203c1ded23c4842cf
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -626,7 +626,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/2fe1c78464988da3d26e1ca443871afa
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/d1daf6e1654ee8a21061e934057cbd2d
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -667,7 +667,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/ea1659c30f5eefe76aaaddcaa13f66fc
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/13d2f91770cd52b8da3da32e23d1a112
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -708,7 +708,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/d88f522129701cf75ae8dbe305663abf
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/b8fd627763bf89474cfbccbddf0ad5f8
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -749,7 +749,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/296d77350a065c23f5ce8ca3b10c3aac
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/1a5208cabb4642502bce541102b7240f
       Runtime: nodejs16.x
       Architectures:
       - arm64
@@ -790,7 +790,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://lojanabio-cfn-deployments-9d488/e22fe933752927957852e2b265174cf8
+      CodeUri: s3://lojanabio-cfn-deployments-9d488/46a756d4e0a92572b48260ee26f060e2
       Runtime: nodejs16.x
       Architectures:
       - arm64

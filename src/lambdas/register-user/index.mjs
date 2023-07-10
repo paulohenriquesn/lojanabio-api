@@ -1,6 +1,6 @@
-import { create, badRequest, serverError } from "../../core/main/helpers/http.mjs";
-import { MissingParamError } from "../../core/main/errors/missing-param.mjs";
-import { makeAddUser } from "../../core/main/factories/add-user.mjs";
+import { create, badRequest, serverError } from "@architect/shared/main/helpers/http.mjs";
+import { MissingParamError } from "@architect/shared/main/errors/missing-param.mjs";
+import { makeAddUser } from "@architect/shared/main/factories/add-user.mjs";
 
 export async function handler(req) {
   const body = JSON.parse(req.body);

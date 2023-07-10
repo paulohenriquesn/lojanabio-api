@@ -1,7 +1,7 @@
-import { ok, unAuthorized, badRequest } from "../../core/main/helpers/http.mjs";
-import { makeUpdateProduct } from "../../core/main/factories/update-product.mjs";
-import { authMiddleware } from "../../core/main/middlewares/auth.mjs";
-import { MissingParamError } from "../../core/main/errors/missing-param.mjs";
+import { ok, unAuthorized, badRequest } from "@architect/shared/main/helpers/http.mjs";
+import { makeUpdateProduct } from "@architect/shared/main/factories/update-product.mjs";
+import { authMiddleware } from "@architect/shared/main/middlewares/auth.mjs";
+import { MissingParamError } from "@architect/shared/main/errors/missing-param.mjs";
 
 export async function handler(req) {
   try {

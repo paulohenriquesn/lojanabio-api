@@ -1,5 +1,5 @@
-import { ok, unAuthorized } from "../../core/main/helpers/http.mjs";
-import { makeGetStore } from "../../core/main/factories/get-store.mjs";
+import { ok, unAuthorized } from "@architect/shared/main/helpers/http.mjs";
+import { makeGetStore } from "@architect/shared/main/factories/get-store.mjs";
 
 export async function handler(req) {
   try {

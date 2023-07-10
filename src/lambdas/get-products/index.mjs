@@ -1,6 +1,6 @@
-import { MissingParamError } from "../../core/main/errors/missing-param.mjs";
-import { makeGetProducts } from "../../core/main/factories/get-products.mjs";
-import { badRequest, ok, serverError } from "../../core/main/helpers/http.mjs";
+import { MissingParamError } from "@architect/shared/main/errors/missing-param.mjs";
+import { makeGetProducts } from "@architect/shared/main/factories/get-products.mjs";
+import { badRequest, ok, serverError } from "@architect/shared/main/helpers/http.mjs";
 
 export async function handler(req) {
   try {
