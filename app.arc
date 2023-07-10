@@ -44,6 +44,10 @@ lojanabio
   method post
   src src/main/lambdas/add-product
 
+/products
+  method delete
+  src src/main/lambdas/delete-product
+
 
 /products/:productid
   method put
